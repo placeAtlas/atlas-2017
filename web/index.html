@@ -10,9 +10,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>The 2017 r/place Atlas</title>
-		<meta name="description" content="An atlas of Reddit's 2017 r/place, with information to each artwork of the canvas provided by the community.">
+		<meta name="description" content="An interactive map of Reddit's 2017 r/place, with information to each artwork of the canvas provided by the community.">
 		<meta name="author" content="Roland Rytz">
-		<meta name="application-name" content="The r/place Atlas 2022">
+		<meta name="application-name" content="The 2017 r/place Atlas">
 		<meta name="robots" content="index, follow">
 		
 		<meta property="og:title" content="The 2017 r/place Atlas">
@@ -23,10 +23,9 @@
 		<meta property="og:image:width" content="512">
 		<meta property="og:image:height" content="512">
 		<meta property="og:image:alt" content="The r/place Atlas logo">
-		<meta property="og:description" content="An atlas of Reddit's 2017 r/place, with information to each artwork of the canvas provided by the community.">
+		<meta property="og:description" content="An interactive map of Reddit's 2017 r/place, with information to each artwork of the canvas provided by the community.">
 
 		<meta name="twitter:card" content="summary">
-		<meta name="twitter:creator" content="Roland Rytz, Place Atlas contributors">
 		<meta name="twitter:url" content="https://2017.place-atlas.stefanocoding.me/">
 		<meta name="twitter:title" content="The 2017 r/place Atlas">
 		<meta name="twitter:description" content="An interactive map of Reddit's 2017 r/place, with information to each artwork of the canvas provided by the community.">
@@ -74,7 +73,7 @@
 						"name": "Place Atlas",
 						"alternateName": "r/placeAtlas",
 						"url": "https://github.com/placeAtlas",
-						"image": "http://place-atlas.stefanocoding.me/_img/logo.png",
+						"image": "http://2023.place-atlas.stefanocoding.me/_img/logo.png",
 						"founder": {
 							"@type": "Person",
 							"@id": "#Codixer",
@@ -107,7 +106,7 @@
 					<div class="d-flex w-100 py-2 align-items-center">
 						<i class="bi bi-info-circle-fill fs-5"></i>
 						<p class="mb-0 flex-grow-1 px-2"></p>
-						<a class="fs-5" data-bs-toggle="collapse" href="#headerAnnouncement" role="button" aria-expanded="false" aria-controls="headerAnnouncement"><i class="bi bi-x-lg"></i></a>	
+						<a class="fs-5" data-bs-toggle="collapse" href="#headerAnnouncement" role="button" aria-expanded="false" aria-controls="headerAnnouncement"><i class="bi bi-x-lg"></i></a>
 					</div>
 				</aside>
 				<nav id="main-navbar" class="navbar navbar-expand-md bg-body border-bottom">
@@ -124,18 +123,19 @@
 							<ul class="navbar-nav me-auto my-2 my-md-0">
 								<li class="nav-item">
 									<div class="btn-group" role="group">
-										<button id="showListButton" class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasList" aria-controls="offcanvasList">Entries List</button>
+										<button id="showListButton" class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasList" aria-controls="offcanvasList">Menu</button>
+										<a class="btn btn-outline-primary" id="drawLink" href="./?mode=draw">Draw</a>
 									</div>
 								</li>
 							</ul>
 							<ul class="navbar-nav mx-auto d-block d-md-none d-lg-block">
 								<li class="nav-item d-flex align-items-center gap-2">
-									<span class="p-2">Coordinates: <span class="badge bg-secondary" id="coords_p">0, 0</span></span>
+									<span class="p-md-2">Coordinates: <span class="badge bg-secondary" id="coords_p">0, 0</span></span>
 								</li>
 							</ul>
 							<hr class="d-md-none">
 							<ul class="navbar-nav flex-row flex-wrap ms-auto">
-								<li class="nav-item dropdown">
+								<li class="nav-item col-6 col-md-auto dropdown">
 									<a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-current="page">
 										Atlas Map
 									</a>
@@ -188,8 +188,7 @@
 				</header>
 				<div class="py-3 mx-3 border-bottom">
 					<div class="d-flex gap-2 mb-2">
-						<a class="btn btn-primary w-50" id="drawLink" href="./?mode=draw">Draw</a>
-						<button type="button" class="btn btn-primary dropdown-toggle w-50" id="dropdownModes" data-bs-toggle="dropdown" aria-expanded="false">Modes</button>
+						<button type="button" class="btn btn-primary dropdown-toggle w-100" id="dropdownModes" data-bs-toggle="dropdown" aria-expanded="false">Layer Views</button>
 						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownModes">
 							<li><a class="dropdown-item" href="./">Normal</a></li>
 							<li><a class="dropdown-item" href="./?mode=explore">Explore</a></li>
@@ -204,7 +203,7 @@
 							<i class="bi bi-discord" aria-hidden="true"></i>
 							Discord
 						</a>
-						<a class="btn btn-outline-primary" href="https://www.reddit.com/r/placeAtlas/" target="_blank" rel="noopener noreferrer">
+						<a class="btn btn-outline-primary" href="https://www.reddit.com/r/placeAtlas2/" target="_blank" rel="noopener noreferrer">
 							<i class="bi bi-reddit" aria-hidden="true"></i>
 							Reddit
 						</a>
@@ -284,7 +283,7 @@
 								Redo
 							</button>
 						</div>
-						<button type="button" class="btn btn-primary" id="finishButton" title="Finish drawing" disabled>Finish</button>
+						<button type="button" class="btn btn-primary" id="finishButton" title="Finish drawing" disabled>Next</button>
 						<button type="button" class="btn btn-secondary" id="resetButton">Reset</button>
 
 						<div class="form-check" id="highlightUnchartedLabel">
