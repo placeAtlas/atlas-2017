@@ -11,6 +11,9 @@ window.instanceId = instanceId
 const instanceSubreddit = "placeAtlas"
 window.instanceSubreddit = instanceSubreddit
 
+const instanceRepo = "https://github.com/placeAtlas/atlas-2017"
+window.instanceRepo = instanceRepo
+
 const pageTitle = "The 2017 r/place Atlas"
 window.pageTitle = pageTitle
 
@@ -213,12 +216,12 @@ window.defaultVariation = defaultVariation
 let defaultPeriod = variationsConfig[defaultVariation].default
 window.defaultPeriod = defaultPeriod
 
-const useNumericalId = false
+const useNumericalId = true
 window.useNumericalId = useNumericalId
 
 console.info(`%cThe 2017 r/place Atlas
 %cCopyright (c) 2017 Roland Rytz <roland@draemm.li>
-Copyright (c) 2022 Place Atlas contributors
+Copyright (c) 2023 Place Atlas Initiative and contributors
 Licensed under AGPL-3.0 (https://2017.place-atlas.stefanocoding.me/license.txt)
 
 https://2017.place-atlas.stefanocoding.me/
