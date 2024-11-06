@@ -135,7 +135,7 @@ Other than contributing to the Atlas data, code contributions are also accepted.
 
 This website is built using classic HTML 5 (no JS frameworks such as Vue, React, etc are used). Bootstrap 5 is used as a CSS framework.
 
-Opening the HTML file on your browser is adequate enough to edit. If it doesn't work, you can try running a local HTTP server.
+Opening the HTML file on your browser is adequate enough to edit. If it doesn't work, you can try running a local HTTP server (Like with [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
 
 ```sh
 # Run it inside the web/ folder.
